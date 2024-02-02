@@ -38,10 +38,10 @@ public class All {
                 String memberAdminPassword = AppConfig.isProd() ? prodMemberAdminPassword : "1234";
 
                 Member memberSystem = memberService.join("system", memberSystemPassword).getData();
-                memberSystem.setRefreshToken("system");
+                if (AppConfig.isNotProd()) memberSystem.setRefreshToken("system");
 
                 Member memberAdmin = memberService.join("admin", memberAdminPassword).getData();
-                memberAdmin.setRefreshToken("admin");
+                if (AppConfig.isNotProd()) memberAdmin.setRefreshToken("admin");
             }
         };
     }

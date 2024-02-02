@@ -24,17 +24,6 @@ public class PostDto {
     @NonNull
     private String title;
 
-    @Setter
-    private Boolean actorCanRead;
-    @Setter
-    private Boolean actorCanEdit;
-    @Setter
-    private Boolean actorCanDelete;
-    @Setter
-    private Boolean actorCanLike;
-    @Setter
-    private Boolean actorCanCancelLike;
-
     public PostDto(Post post) {
         this.id = post.getId();
         this.createDate = post.getCreateDate();

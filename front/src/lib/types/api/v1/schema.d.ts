@@ -63,11 +63,6 @@ export interface components {
       authorName: string;
       authorProfileImgUrl: string;
       title: string;
-      actorCanRead?: boolean;
-      actorCanEdit?: boolean;
-      actorCanDelete?: boolean;
-      actorCanLike?: boolean;
-      actorCanCancelLike?: boolean;
     };
     RsDataEditResponseBody: {
       resultCode: string;
